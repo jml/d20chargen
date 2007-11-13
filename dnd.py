@@ -238,7 +238,7 @@ def rollCoolStats(minimum=0):
         stats = rollStats()
         if abilitiesCost(stats) >= minimum:
             return stats
-        
+
 
 def generateStats():
     stats = rollCoolStats()
@@ -247,11 +247,3 @@ def generateStats():
         print '%2d [%s%d]' % (stat, sign(b), b)
     print
     print 'Cost: %d' % (abilitiesCost(stats),)
-    
-kwahu = Combatant("Kwahu",52,14,7,10,lambda: d12() + 6)
-jarek = Combatant("Jarek", 32, 15,1,3,lambda: d8())
-jarek.threatRange = 19
-zane = Combatant("Zane",40,16,4,6,lambda: d6() + 3)
-zane.threatRange = 17
-blueFox = Combatant("Blue Fox", 59, 16, 4, 11, lambda: d8() +3)
-kwahu.damage = lambda: d12() + 8
